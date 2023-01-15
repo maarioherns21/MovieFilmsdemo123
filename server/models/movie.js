@@ -13,6 +13,7 @@ const movieSchema = new Schema({
   creator: String,
   creatorName: String,
   images: String,
+  video: String,
   createdAt: {
     type: Date,
     default: new Date(),

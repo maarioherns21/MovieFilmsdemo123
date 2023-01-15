@@ -17,6 +17,7 @@ const [formData, setFormData] = useState({
   genre: "action",
   cast: "",
   director: "",
+  video: "",
 });
 const [error, setError] = useState([]);
 const [isPending, setIspending] = useState(false);
@@ -90,7 +91,7 @@ const handleSubmit = async (e) => {
                   <option  value="drama">Drama</option>
                   <option  value="fantasy">Fantasy</option>
                   <option  value="horror">Horror</option>
-                  <option  value="mistery">Mystery</option>
+                  <option  value="mystery">Mystery</option>
                   <option  value="romance">Romance</option>
                  </select>
              </div>
@@ -106,6 +107,10 @@ const handleSubmit = async (e) => {
               <label className="block text-sm font-medium text-gray-700">About</label>
                 <textarea value={formData.body}  onChange={(e) => setFormData({ ...formData, body: e.target.value })}   id="about" name="about" rows="3" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-gray-50 border" placeholder="" />
             </div>
+            <div >
+                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">video url</label>
+                 <input type="url" value={formData.video}  onChange={(e) => setFormData({ ...formData, video: e.target.value })}  name="video" id="video" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="" required="" />
+             </div>
         <div>
            <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
             <div className="space-y-1 text-center">
@@ -121,7 +126,7 @@ const handleSubmit = async (e) => {
      </div>
              <div className="flex items-start">
                  <div className="flex items-center h-5">
-                   <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="" />
+                   <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required />
                  </div>
                  <div className="ml-3 text-sm">
                    <label  className="font-light text-gray-500 dark:text-gray-300">I accept the <a className="font-medium text-primary-600 hover:underline dark:text-primary-500" href="/">Terms and Conditions</a></label>

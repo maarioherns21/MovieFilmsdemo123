@@ -164,7 +164,7 @@ const UserProfilePage = () => {
                                      <div className="flex flex-wrap justify-center items-center" >
                                         <div>{isLoading ? loading : ""}</div>
                                      <MovieMap movies={currentMovies} title="" />
-                                     <Pagination moviesTotal={movies.length}  moviesPerPage={moviesPerPage} setCurrentPage={setCurrentPage} setMoviesPerPage={setMoviesPerPage} />
+                                     <Pagination moviesTotal={currentMovies.length}  moviesPerPage={moviesPerPage} setCurrentPage={setCurrentPage} setMoviesPerPage={setMoviesPerPage} />
                                    </div>
                        </section>
                     

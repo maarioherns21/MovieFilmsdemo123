@@ -17,7 +17,7 @@ const currentMovies = movies.slice(firstMovieindex, lastMovieIndex)
       <div>
         <div>{error ? error : null}</div>
         <div>{isLoading ? loading : ""}</div>
-        <MovieMap movies={currentMovies} title="All Movies" />
+        <MovieMap movies={currentMovies} title="New Movies" />
         <Pagination moviesTotal={movies.length}  moviesPerPage={moviesPerPage} setCurrentPage={setCurrentPage} setMoviesPerPage={setMoviesPerPage} />
       </div>
     );

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 
 const MovieCard = ({ movie }) => {
+
+
   return (
     <div className="bg-white rounded-lg m-h-64 p-2 ">
     <Link to={`/movie/${movie._id}`} >
@@ -15,7 +17,7 @@ const MovieCard = ({ movie }) => {
         <h5 className="text-black-400 text-2xl font-bold leading-none">
           {movie.name}
         </h5>
-        <span className="text-xs text-gray-400 leading-none">{movie.body}</span>
+        <span className="text-xs text-gray-400 leading-none">{movie.body.slice(0, 80)}...</span>
       </div>
       <div className="flex items-center">
         <div className="text-lg text-black font-light">
