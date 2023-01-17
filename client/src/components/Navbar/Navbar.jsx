@@ -11,7 +11,7 @@ const Navbar = ({logout}) =>{
     className="flex justify-between md:justify-around py-4 bg-white/80 backdrop-blur-md shadow-md w-full px-10 fixed md:absolute top-0 left-0 right-0 z-10 px-8 md:px-3">
     <div className="flex items-center">
      
-        <Link className="cursor-pointer">
+        <Link to="/" className="cursor-pointer">
             <h3 className="text-2xl font-medium text-black-500">
                 {/* <img
                     className="h-10"
@@ -44,8 +44,9 @@ const Navbar = ({logout}) =>{
         </>
            )}
         <Link
+            to="/search"
             className="flex text-gray-600 hover:text-blue-500 cursor-pointer transition-colors duration-300">
-            Pricing
+            Search
         </Link>
 
         <Link

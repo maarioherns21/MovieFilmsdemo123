@@ -9,10 +9,10 @@ const [formaData, setFormData] = useState({
   email: "",
   password: "",
   confirmPassword: "",
-  photoUrl: "",
+  imageUrl: "",
   bio: "",
-  firstName:"",
-  lastName:"",
+  givenName:"",
+  familyName:"",
   phoneNumber: 0,
   birthday: "",
   address: "",
@@ -25,7 +25,6 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   try {
     const token = { ...formaData };
-    console.log(token)
     setIsPending(true);
     console.log(token);
     const res = await fetch("http://localhost:4000/api/users/signup", {
@@ -46,13 +45,15 @@ const handleSubmit = async (e) => {
 };
    
    
-   
+
    
     return (
-        <div >
+        <div className="pt-10" >
            <section className="bg-gray-50 dark:bg-gray-900">
-         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <a href="/" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto ">
+         <a
+            href="/"
+            className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white pt-5" >
         <div>{error ? error : null}</div>
           <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
           MovieFilms   
@@ -62,14 +63,14 @@ const handleSubmit = async (e) => {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Create and account
               </h1>
-              <form onSubmit={handleSubmit}  className=" grid gap-4 mb-4 sm:grid-cols-2">
+              <form onSubmit={handleSubmit} className="grid gap-4 mb-4 sm:grid-cols-2 ">
                    <div >
                       <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                      <input value={formaData.firstName} onChange={(e) => setFormData({...formaData , firstName: e.target.value})}  type="text" name="username" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name11" required="" />
+                      <input value={formaData.givenName} onChange={(e) => setFormData({...formaData , givenName: e.target.value})}  type="text" name="username" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name11" required="" />
                   </div>
                   <div >
                       <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
-                      <input value={formaData.lastName} onChange={(e) => setFormData({...formaData , lastName: e.target.value})}  type="text" name="username" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name11" required="" />
+                      <input value={formaData.familyName} onChange={(e) => setFormData({...formaData , familyName: e.target.value})}  type="text" name="username" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name11" required="" />
                   </div>
                   <div >
                       <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
@@ -109,7 +110,7 @@ const handleSubmit = async (e) => {
                   </div>
                   <div>
                       <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
-                      <input value={formaData.confirmPassword} onChange={(e) => setFormData({...formaData , confirmPassword: e.target.value})} type="confirm-password" name="confirm-password" id="confirm-password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="" />
+                      <input value={formaData.confirmPassword} onChange={(e) => setFormData({...formaData , confirmPassword: e.target.value})} type="confirm-password" name="confirm-password" id="confirm-password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="required" />
                   </div>
                   <div>
                       <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bio</label>
@@ -117,7 +118,7 @@ const handleSubmit = async (e) => {
                   </div>
                   <div>
                       <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Photo</label>
-                      <FileBase value={formaData.photoUrl} multiple={false} onDone={({base64}) => setFormData({...formaData, photoUrl: base64})} type="file" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" /> 
+                      <FileBase value={formaData.imageUrl} multiple={false} onDone={({base64}) => setFormData({...formaData, imageUrl: base64})} type="file" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" /> 
                   </div>
                   <div className="flex items-start">
                       <div className="flex items-center h-5">

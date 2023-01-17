@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const FormPage = () => {
 const user = JSON.parse(localStorage.getItem("token"))
-console.log(user?._id)
+console.log(user?.result.name)
 const [formData, setFormData] = useState({
   name: "",
   body: "",
-  creator: user?._id,
-  creatorName: `${user?.firstName} ${user?.lastName}`,
+  creator: user?.result.googleId || user?.result._id,
+  creatorName: `${user?.result.givenName} ${user?.result.familyName}` || user?.result.name,
   images: "",
   runtime: 0,
   classification: "G",
@@ -49,7 +49,6 @@ const handleSubmit = async (e) => {
 //   e.preventDefault();
 //   setFormData({ name: "", body: "", creator: "mario", images: "" });
 // };
-
 
     return (
       <section className="bg-gray-50 dark:bg-gray-900">

@@ -47,8 +47,8 @@ const MovieItem = ({movie, onDelete}) => {
                   </a>
                 </span>
               </div>
-              <p className=" leading-relaxed text-gray-300 mb-3  "><span className="rounded-md border-2 border p-1 hover:shadow">{movie.classification}</span></p>
-              <p className="leading-relaxed text-gray-300 text-xs title-font  mb-3 "><span className=" rounded-md border-2 border p-1 hover:shadow "> {movie.genre}</span></p>
+              <p className=" leading-relaxed text-gray-300 mb-3  "><span className="rounded-md border-1 p-1 hover:shadow">{movie.classification}</span></p>
+              <p className="leading-relaxed text-gray-300 text-xs title-font  mb-3 "><span className=" rounded-md border-1  p-1 hover:shadow "> {movie.genre}</span></p>
               <p className="leading-relaxed text-gray-600 text-sm title-font mb-1">Time<br/><span className="text-gray-400">{movie.runtime}min</span></p>
               <p className="leading-relaxed text-gray-600 text-sm title-font mb-1">Director<br/><span className="text-gray-400">{movie.director}</span></p>
               <p className="leading-relaxed text-gray-600 text-sm title-font mb-1">Cast<br/><span className="text-gray-400">{movie.cast}</span></p>

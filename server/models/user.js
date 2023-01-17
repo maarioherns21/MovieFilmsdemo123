@@ -2,17 +2,17 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
-  { 
-    firstName: String, 
-    lastName: String,
+  {  
+    email: {type:String , unique: true},
+    password: String,
+    givenName: String,
+    familyName: String,
     phoneNumber: Number,
     birthday: String,
-    address: String, 
+    address: String,
     gender: String,
     username: String,
-    email: String,
-    password: String,
-    photoUrl: String,
+    imageUrl: String,
     bio: String,
   },
   {

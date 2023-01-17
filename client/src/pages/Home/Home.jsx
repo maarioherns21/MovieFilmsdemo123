@@ -1,6 +1,7 @@
 import Movies from "../../components/Movies/Movies"
 
 import {Player} from "@lottiefiles/react-lottie-player"
+import useFetch from "../../components/useFetch/useFetch"
 
 const Home = () => {
 
@@ -49,7 +50,7 @@ const Home = () => {
   
     <section
         className="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
-        style={{backgroundImage:"url(https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?auto=format&fit=crop&w=880&q=80)" }}>
+        style={{backgroundImage:"url(https://img.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-72.jpg?w=1800&t=st=1673838312~exp=1673838912~hmac=66bcb91bd39b5a925a70f301fd540d7b53ec7e47e4038de4842cf0e837b10e72)" }}>
         <h1 className="text-white text-5xl font-semibold mt-20 mb-10">
             This is Parallax Effect
         </h1>
@@ -91,7 +92,7 @@ const Home = () => {
   <Movies />
   <section
         className="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
-        style={{backgroundImage:"url(https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?auto=format&fit=crop&w=880&q=80)" }}>
+        style={{backgroundImage:"url(https://img.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-72.jpg?w=1800&t=st=1673838312~exp=1673838912~hmac=66bcb91bd39b5a925a70f301fd540d7b53ec7e47e4038de4842cf0e837b10e72)" }}>
         <h1 className="text-white text-5xl font-semibold mt-20 mb-10">
             moviefilms
         </h1>

@@ -9,6 +9,7 @@ import SignupPage from  "../pages/SignupPage/SignupPage"
 import MovieDetails from '../components/Movies/MovieDetails/MovieDetails';
 import Footer from '../components/Footer/Footer';
 import useToken from '../components/useToken/useToken';
+import SearchPage from '../pages/SearchPage/SearchPage';
 
 function App() {
 const {token, setToken, logout } = useToken();
@@ -23,8 +24,9 @@ const {token, setToken, logout } = useToken();
               <Route path="/" element={<Home />} />
               <Route path="/form" element={<FormPage />} />
               <Route path="/profile" element={<UserProfilePage />} />
+              <Route path='/search' element={<SearchPage />} />
               <Route path='/movie/:id' element={<MovieDetails />} />
-             <Route path="/signup" element={<SignupPage setToken={setToken} />} />
+              <Route path="/signup" element={<SignupPage setToken={setToken} />} />
               <Route path="/login" element={<LoginPage setToken={setToken} />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
