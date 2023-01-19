@@ -1,8 +1,4 @@
-import { useEffect } from "react"
-import { useState } from "react"
 import MovieCard from "../../components/Movies/MovieCard"
-import useFetch from "../../components/useFetch/useFetch"
-import Popup from "reactjs-popup"
 import useSearch from "../../components/useSearch/useSearch"
 
 

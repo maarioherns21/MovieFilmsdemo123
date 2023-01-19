@@ -6,7 +6,7 @@ export const index = async (req, res) => {
 
     res.status(200).json(data);
   } catch (error) {
-    res.stuat(401).json({ error: error.message });
+    res.status(401).json({ error: error.message });
   }
 };
 
@@ -16,11 +16,11 @@ export const createMovie = async (req, res) => {
 
     const newData = new Movie({ ...movie });
 
-    const  saveData = await newData.save()
+    const saveData = await newData.save();
 
     res.status(200).json(newData);
   } catch (error) {
-    res.stuat(401).json({ error: error.message });
+    res.status(401).json({ error: error.message });
   }
 };
 
@@ -34,7 +34,7 @@ export const updateMovie = async (req, res) => {
 
     res.status(200).json(data);
   } catch (error) {
-    res.stuat(401).json({ error: error.message });
+    res.status(401).json({ error: error.message });
   }
 };
 export const deleteMovie = async (req, res) => {
@@ -45,6 +45,54 @@ export const deleteMovie = async (req, res) => {
 
     res.status(200).json(data);
   } catch (error) {
-    res.stuat(401).json({ error: error.message });
+    res.status(401).json({ error: error.message });
   }
 };
+
+////-------------------------------------------new-------------------------------------------------
+
+//// comments
+
+export const commentMovie = async (req, res) => {
+  try {
+    const { comment } = req.body;
+    const { id } = req.params;
+
+    const movie = await Movie.findById(id);
+
+    movie.comments.push(comment);
+
+    const newMovie = await Movie.findByIdAndUpdate(id, movie, { new: true });
+
+    res.status(200).json(newMovie);
+  } catch (error) {
+    console.log(error.message);
+
+    res.status(401).json({ message: error.message });
+  }
+};
+
+/// likes
+
+export const movieLikes = async (req, res) => {
+  try {
+    const { like } = req.body;
+    const { id } = req.params;
+    
+    console.log(like);
+    
+    const movie = await Movie.findById(id);
+
+    movie.likes.push(like);
+
+    const newMovie = await Movie.findByIdAndUpdate(id, movie, { new: true });
+
+    res.status(200).json(newMovie);
+  } catch (error) {
+    console.log(error.message);
+
+    res.status(401).json({ message: error.message });
+  }
+};
+
+////-------------------------------------------new-------------------------------------------------

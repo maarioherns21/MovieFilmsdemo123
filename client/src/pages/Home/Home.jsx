@@ -1,7 +1,6 @@
 import Movies from "../../components/Movies/Movies"
-
 import {Player} from "@lottiefiles/react-lottie-player"
-import useFetch from "../../components/useFetch/useFetch"
+
 
 const Home = () => {
 

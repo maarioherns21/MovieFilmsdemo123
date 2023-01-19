@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 
 const FormPage = () => {
-const user = JSON.parse(localStorage.getItem("token"))
-console.log(user?.result.name)
+const user = JSON.parse(localStorage.getItem("token"));
+console.log(user?.result.name);
 const [formData, setFormData] = useState({
   name: "",
   body: "",
   creator: user?.result.googleId || user?.result._id,
-  creatorName: `${user?.result.givenName} ${user?.result.familyName}` || user?.result.name,
+  creatorName:`${user?.result.givenName} ${user?.result.familyName}` || user?.result.name,
   images: "",
   runtime: 0,
   classification: "G",
@@ -21,13 +21,13 @@ const [formData, setFormData] = useState({
 });
 const [error, setError] = useState([]);
 const [isPending, setIspending] = useState(false);
-const navigate = useNavigate()
+const navigate = useNavigate();
 
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
     const movie = { ...formData };
-    console.log(movie)
+    console.log(movie);
     setIspending(true);
     const res = await fetch("http://localhost:4000/api/movies/new", {
       method: "POST",

@@ -2,10 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@leecheuk/react-google-login";
 import Icon from "./Icon"
-import useFetch from "../../components/useFetch/useFetch";
+
 
 const LoginPage = ({ setToken }) => {
-  const {isLoading, loading} =useFetch()
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState([]);
   const [isPending, setIsPending] = useState(false);

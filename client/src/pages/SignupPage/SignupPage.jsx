@@ -11,12 +11,12 @@ const [formaData, setFormData] = useState({
   confirmPassword: "",
   imageUrl: "",
   bio: "",
-  givenName:"",
-  familyName:"",
+  givenName: "",
+  familyName: "",
   phoneNumber: 0,
   birthday: "",
   address: "",
-  gender: "male"
+  gender: "male",
 });  
 const [error, setError] = useState([]);
 const [isPending, setIsPending] = useState(false);  
