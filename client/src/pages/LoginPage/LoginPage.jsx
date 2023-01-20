@@ -15,7 +15,7 @@ const LoginPage = ({ setToken }) => {
     try {
       const token = { ...formData };
       setIsPending(true);
-      const res = await fetch("http://localhost:4000/api/users/login", {
+      const res = await fetch("https://moviemario123.herokuapp.com/api/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(token),

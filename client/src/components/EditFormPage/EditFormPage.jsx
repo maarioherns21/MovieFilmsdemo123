@@ -16,7 +16,7 @@ const EditFormPage = ({movie}) =>{
         try {
           const movie = { ...formData };
           setIspending(true);
-          const res = await fetch(`http://localhost:4000/api/movies/${params.id}`, {
+          const res = await fetch(`https://moviemario123.herokuapp.com/api/movies/${params.id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(movie),

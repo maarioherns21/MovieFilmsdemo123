@@ -1,8 +1,8 @@
-import Movie from "../models/movie.js";
+import Films from "../models/movie.js";
 
 export const index = async (req, res) => {
   try {
-    const data = await Movie.find();
+    const data = await Films.find();
 
     res.status(200).json(data);
   } catch (error) {
@@ -14,7 +14,7 @@ export const createMovie = async (req, res) => {
   try {
     const movie = req.body;
 
-    const newData = new Movie({ ...movie });
+    const newData = new Films({ ...movie });
 
     const saveData = await newData.save();
 
@@ -30,7 +30,7 @@ export const updateMovie = async (req, res) => {
     const { id } = req.params;
     const newMovie = { ...movie, _id: id };
 
-    const data = await Movie.findByIdAndUpdate(id, newMovie, { new: true });
+    const data = await Films.findByIdAndUpdate(id, newMovie, { new: true });
 
     res.status(200).json(data);
   } catch (error) {
@@ -41,7 +41,7 @@ export const deleteMovie = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const data = await Movie.findByIdAndDelete(id);
+    const data = await Films.findByIdAndDelete(id);
 
     res.status(200).json(data);
   } catch (error) {
@@ -58,11 +58,11 @@ export const commentMovie = async (req, res) => {
     const { comment } = req.body;
     const { id } = req.params;
 
-    const movie = await Movie.findById(id);
+    const movie = await Films.findById(id);
 
     movie.comments.push(comment);
 
-    const newMovie = await Movie.findByIdAndUpdate(id, movie, { new: true });
+    const newMovie = await Films.findByIdAndUpdate(id, movie, { new: true });
 
     res.status(200).json(newMovie);
   } catch (error) {
@@ -81,11 +81,11 @@ export const movieLikes = async (req, res) => {
     
     console.log(like);
     
-    const movie = await Movie.findById(id);
+    const movie = await Films.findById(id);
 
     movie.likes.push(like);
 
-    const newMovie = await Movie.findByIdAndUpdate(id, movie, { new: true });
+    const newMovie = await Films.findByIdAndUpdate(id, movie, { new: true });
 
     res.status(200).json(newMovie);
   } catch (error) {

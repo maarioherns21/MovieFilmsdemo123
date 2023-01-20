@@ -13,7 +13,7 @@ const useFetch = () => {
     
      const fetchData = async () => {
        try {
-         const res = await fetch("http://localhost:4000/api/movies");
+         const res = await fetch("https://moviemario123.herokuapp.com/api/movies");
          const data = await res.json();
          setMovies(data);
          console.log(data)

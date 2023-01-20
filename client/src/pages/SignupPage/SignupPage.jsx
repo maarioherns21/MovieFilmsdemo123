@@ -27,7 +27,7 @@ const handleSubmit = async (e) => {
     const token = { ...formaData };
     setIsPending(true);
     console.log(token);
-    const res = await fetch("http://localhost:4000/api/users/signup", {
+    const res = await fetch("https://moviemario123.herokuapp.com/api/users/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(token),

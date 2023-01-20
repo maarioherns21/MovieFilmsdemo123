@@ -19,7 +19,7 @@ const navigate = useNavigate("/")
 const handleDelete = async (e) => {
   e.preventDefault()
   try {
-    const res = await fetch(`http://localhost:4000/api/movies/${params.id}`, {
+    const res = await fetch(`https://moviemario123.herokuapp.com/api/movies/${params.id}`, {
       method: "DELETE",
     });
     const data = await res.json();
@@ -36,7 +36,7 @@ const handleLikes = async (e) => {
     const likes = { like };
     console.log(likes);
     const res = await fetch(
-      `http://localhost:4000/api/movies/${params.id}/likes`,
+      `https://moviemario123.herokuapp.com/api/movies/${params.id}/likes`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

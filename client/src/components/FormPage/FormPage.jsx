@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
     const movie = { ...formData };
     console.log(movie);
     setIspending(true);
-    const res = await fetch("http://localhost:4000/api/movies/new", {
+    const res = await fetch("https://moviemario123.herokuapp.com/api/movies/new", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(movie),
