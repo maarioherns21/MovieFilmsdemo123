@@ -1,3 +1,4 @@
+import ApiMovies from "../../components/APIComponents/ApiMovies/ApiMovies";
 import MovieCard from "../../components/Movies/MovieCard"
 import useSearch from "../../components/useSearch/useSearch"
 
@@ -46,6 +47,9 @@ const {setInput , output, error, isLoading, loading} =useSearch()
              ))} 
       </div>
       </section>
+      <div>
+        <ApiMovies />
+      </div>
       </main>
      
     );

@@ -10,6 +10,7 @@ import MovieDetails from '../components/Movies/MovieDetails/MovieDetails';
 import Footer from '../components/Footer/Footer';
 import useToken from '../components/useToken/useToken';
 import SearchPage from '../pages/SearchPage/SearchPage';
+import ApiMovieDetails from '../components/APIComponents/ApiMovieDetails/ApiMovieDetails';
 
 function App() {
 const {token, setToken, logout } = useToken();
@@ -26,6 +27,7 @@ const {token, setToken, logout } = useToken();
               <Route path="/profile" element={<UserProfilePage />} />
               <Route path='/search' element={<SearchPage />} />
               <Route path='/movie/:id' element={<MovieDetails />} />
+              <Route path='/api/movie/:id' element={<ApiMovieDetails />} />
               <Route path="/signup" element={<SignupPage setToken={setToken} />} />
               <Route path="/login" element={<LoginPage setToken={setToken} />} />
               <Route path="/*" element={<Navigate to="/" />} />

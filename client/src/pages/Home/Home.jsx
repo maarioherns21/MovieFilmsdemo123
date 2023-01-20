@@ -1,6 +1,6 @@
 import Movies from "../../components/Movies/Movies"
 import {Player} from "@lottiefiles/react-lottie-player"
-
+import ApiMovies from "../../components/APIComponents/ApiMovies/ApiMovies"
 
 const Home = () => {
 
@@ -51,53 +51,53 @@ const Home = () => {
         className="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
         style={{backgroundImage:"url(https://img.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-72.jpg?w=1800&t=st=1673838312~exp=1673838912~hmac=66bcb91bd39b5a925a70f301fd540d7b53ec7e47e4038de4842cf0e837b10e72)" }}>
         <h1 className="text-white text-5xl font-semibold mt-20 mb-10">
-            This is Parallax Effect
-        </h1>
-
-        <span className="text-center font-bold my-20 text-white/90">
-            <a
-                href="https://egoistdeveloper.github.io/twcss-to-sass-playground/"
-                className="text-white/90 hover:text-white">
-                Convetert to SASS
-            </a>
-
-            <hr className="my-4" />
-
-            <a
-                href="https://unsplash.com/photos/8Pm_A-OHJGg"
-                className="text-white/90 hover:text-white">
-                Image Source
-            </a>
-
-            <hr className="my-4" />
-
-            <p>
-                <a
-                    href="https://github.com/EgoistDeveloper/my-tailwind-components/blob/main/src/templates/parallax-landing-page.html"
-
-                    className="text-white/90 hover:text-white">
-                    Source Code
-                </a>
-                |
-                <a
-                    href="https://egoistdeveloper.github.io/my-tailwind-components/./src/templates/parallax-landing-page.html"
-
-                    className="text-white/90 hover:text-white">
-                    Full Preview
-                </a>
-            </p>
-        </span>
-    </section>
-  <Movies />
-  <section
-        className="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
-        style={{backgroundImage:"url(https://img.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-72.jpg?w=1800&t=st=1673838312~exp=1673838912~hmac=66bcb91bd39b5a925a70f301fd540d7b53ec7e47e4038de4842cf0e837b10e72)" }}>
-        <h1 className="text-white text-5xl font-semibold mt-20 mb-10">
             moviefilms
         </h1>
 
         <span className="text-center font-bold my-20 text-white/90">
             <a
+                href="/"
+                className="text-white/90 hover:text-white">
+               Balahah
+            </a>
+
+            <hr className="my-4" />
+
+            <a
+                href="/"
+                className="text-white/90 hover:text-white">
+                Image Source
+            </a>
+
+            <hr className="my-4" />
+
+            <p>
+                <a
+                    href="/"
+
+                    className="text-white/90 hover:text-white">
+                   sdsdasdsdsad
+                </a>
+                |
+                <a
+                    href="/"
+
+                    className="text-white/90 hover:text-white">
+                    lalalala
+                </a>
+            </p>
+        </span>
+    </section>
+    <ApiMovies />
+     <Movies />
+  {/* <section
+        className="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
+        style={{backgroundImage:"url(https://img.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-72.jpg?w=1800&t=st=1673838312~exp=1673838912~hmac=66bcb91bd39b5a925a70f301fd540d7b53ec7e47e4038de4842cf0e837b10e72)" }}>
+        <h1 className="text-white text-5xl font-semibold mt-20 mb-10">
+            moviefilms
+        </h1>
+        <span className="text-center font-bold my-20 text-white/90">
+            <a
                 href="https://egoistdeveloper.github.io/twcss-to-sass-playground/"
                 className="text-white/90 hover:text-white">
                 Convetert to SASS
@@ -129,8 +129,7 @@ const Home = () => {
                 </a>
             </p>
         </span>
-    </section>
-
+    </section> */}
     <section className="p-20 space-y-8">
         <h1 className="text-4xl text-center my-20">Enjoy the best at moviefilms</h1>
         <p>
