@@ -14,7 +14,7 @@ const handleComment = async (e) => {
   try {
     const newComments = { ...commentData };
     console.log(newComments);
-    const res = await fetch(`http://localhost:4000/api/movies/${id}/comment`, {
+    const res = await fetch(`https://moviemario123.herokuapp.com/api/movies/${id}/comment`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newComments),

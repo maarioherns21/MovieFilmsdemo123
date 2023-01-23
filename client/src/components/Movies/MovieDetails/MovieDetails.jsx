@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import CommentSection from "../../CommentSection/CommentSection"
 import useFetch from "../../useFetch/useFetch"
 import MovieItem from "./MovieItem"
-
+import ApiMovies from "../../APIComponents/ApiMovies/ApiMovies"
 
 
 
@@ -60,6 +60,7 @@ if(!movie) return loading
         <div>{error ? error : null}</div>
         {movie && <MovieItem movie={movie} onDelete={handleDelete} handleLikes={handleLikes} user={user} />}
         <CommentSection movie={movie} />
+        <ApiMovies />
         </section>
        
     );
