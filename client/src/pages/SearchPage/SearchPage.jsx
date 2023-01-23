@@ -48,6 +48,7 @@ const {setInput , output, error, isLoading, loading} =useSearch()
       </div>
       </section>
       <div>
+        <h3>more searchest comming soon!</h3>
         <ApiMovies />
       </div>
       </main>

@@ -6,14 +6,15 @@ import { Link } from "react-router-dom"
 const Navbar = ({logout }) =>{
  const user = JSON.parse(localStorage.getItem("token")) 
  const [showNav, setShowNav] = useState(true)
- 
+ const hide = () => setShowNav(false);
+ const show = () => setShowNav(true);
     
     return (
 <header className="container">
 <nav
     className="flex justify-between md:justify-around py-4 bg-white/80 backdrop-blur-md shadow-md w-full px-10 fixed md:absolute top-0 left-0 right-0 z-10 px-8 md:px-3">
     <div className="flex items-center ">
-        <Link to="/" className="cursor-pointer space-x-5 hidden md:flex">
+        <Link to="/" className="cursor-pointer space-x-5  md:flex">
             <h3 className="text-2xl font-medium text-black-500">
                 {/* <img
                     className="h-10"
@@ -25,7 +26,7 @@ const Navbar = ({logout }) =>{
     </div>
     { showNav && 
     <>
-    <div className="items-center md:space-x-8 justify-center justify-items-start  md:block md:w-auto md:flex md:pt-2 w-full left-0 top-16 px-5 md:px-10 py-3 md:py-0 border-t md:border-t-0"  >
+    <div  className="items-center md:space-x-8 justify-center justify-items-start  md:block md:w-auto md:flex md:pt-2 w-full left-0 top-16 px-5 md:px-10 py-3 md:py-0 border-t md:border-t-0"  >
         <Link 
             to="/"
             className="flex text-gray-600 hover:text-blue-500 cursor-pointer transition-colors duration-300">
@@ -130,7 +131,7 @@ const Navbar = ({logout }) =>{
     </>
 }
     <button
-       onClick={() =>  setShowNav(false)}
+       onClick={showNav ? hide : show}
         className="w-10 h-10 md:hidden justify-self-end rounded-full hover:bg-gray-100">
         <svg
             className="mx-auto"
@@ -143,8 +144,6 @@ const Navbar = ({logout }) =>{
             <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
         </svg>
     </button>
-
-
 </nav>
 </header>
 )

@@ -86,11 +86,9 @@ return (
               <div className=" pb-5 border-b-2 border-gray-200 mb-5 " />
               <div className="flex">
               <button onClick={onDelete} className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Delete</button>
-              <button className="flex ml-1 text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded">
-                <Popup trigger={<button>Update</button>}>
+                <Popup trigger={<button className="flex ml-1 text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded">Update</button>}>
                 <EditFormPage movie={movie} />
                 </Popup>
-              </button>
               </div>
                <div className="pb-5 border-b-2 border-gray-200 mb-5 " />
                

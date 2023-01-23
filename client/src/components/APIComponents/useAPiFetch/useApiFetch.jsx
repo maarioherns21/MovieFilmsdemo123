@@ -12,7 +12,7 @@ const useApiFetch = () => {
     const [currentPage, setCurrentPage]=useState(1)
     const [moviesPerPage, setMoviesPerPage] =useState(4)
     
-
+/// restfull api
     const fetchData = async () => {
       try {
         const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=79fe92d2e9ddc8faf9312e4650491c9b`);

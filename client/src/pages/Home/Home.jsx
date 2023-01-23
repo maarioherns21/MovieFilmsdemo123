@@ -24,18 +24,18 @@ const Home = () => {
 
                 <p
                     className="visible mx-0 mt-3 mb-0 text-sm leading-relaxed text-left text-slate-400">
-                    Helping you maximize operations management with digitization
+                    helping you share your favorite movies 
                 </p>
             </div>
 
-            <div className="text-center lg:text-left">
+            {/* <div className="text-center lg:text-left">
                 <a href="/" className="block visible py-4 px-8 mb-4 text-xs font-semibold tracking-wide leading-none text-white bg-blue-500 rounded cursor-pointer sm:mr-3 sm:mb-0 sm:inline-block"
                 >Key Features</a>
 
                 <a href="/"
                     className="block visible py-4 px-8 text-xs font-semibold leading-none bg-white rounded border border-solid cursor-pointer sm:inline-block border-slate-200 text-slate-500"
                     >How We Work?</a>
-            </div>
+            </div> */}
         </div>
 
    
@@ -51,11 +51,11 @@ const Home = () => {
         className="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
         style={{backgroundImage:"url(https://img.freepik.com/free-vector/vector-illustration-mountain-landscape_1441-72.jpg?w=1800&t=st=1673838312~exp=1673838912~hmac=66bcb91bd39b5a925a70f301fd540d7b53ec7e47e4038de4842cf0e837b10e72)" }}>
         <h1 className="text-white text-5xl font-semibold mt-20 mb-10">
-            moviefilms
+            Moviefilms
         </h1>
 
-        <span className="text-center font-bold my-20 text-white/90">
-            <a
+        <span className="text-center font-bold my-10 text-white/90">
+            {/* <a
                 href="/"
                 className="text-white/90 hover:text-white">
                Balahah
@@ -66,25 +66,23 @@ const Home = () => {
             <a
                 href="/"
                 className="text-white/90 hover:text-white">
-                Image Source
-            </a>
+                lalaala
+            </a> */}
 
-            <hr className="my-4" />
-
+            {/* <hr className="my-2" /> */}
             <p>
                 <a
                     href="/"
-
                     className="text-white/90 hover:text-white">
-                   sdsdasdsdsad
+                   Whenever a publication comes out with a list of the best movies of all-time, the hope is that it will spark a fruitful, spirited discussion among the world’s filmlovers, one that’s carried out with polite respect for individual opinions and the nature of subjective taste. We know better. If you’re going to talk about movies at all, let alone the best movies of all-time, it’s not going to be a ‘discussion’ – it’s going to be a knock-down, drag-out, full-throated, spittle-spraying argument. And you know what? That’s cool with us (do be polite though, people).
                 </a>
-                |
+                {/* |
                 <a
                     href="/"
 
                     className="text-white/90 hover:text-white">
                     lalalala
-                </a>
+                </a> */}
             </p>
         </span>
     </section>

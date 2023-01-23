@@ -78,7 +78,7 @@ return (
                                </div>
                                <div className="text-center my-2">
                                    <img className="h-16 w-16 rounded-full mx-auto"
-                                       src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
+                                       src="https://avatars2.githubusercontent.com/u/24622175?s=60&amp;v=4"
                                        alt="" />
                                    <a href="/" className="text-main-color">Natie</a>
                                </div>
